@@ -1,0 +1,71 @@
+<div class="search">
+  <form action="" #form="ngForm" (click)="submit()">
+    <input type="text" name="city" placeholder="Search city" [(ngModel)]="cityname">
+  </form>
+</div>
+
+<div class="container">
+  <div class="upper-container">
+    <img src="../assets/cold.jpg" alt="" *ngIf="14>15">
+    <img src="../assets/hot.jpg" alt="" *ngIf="14<=15">
+
+    <div class="weather-data">
+      <div class="location">Egypt</div>
+      <div class="tempreature">{{ 27.5| number: '1.0-0' }}°C</div>
+    </div>
+
+  </div>
+  <div class="lower-container">
+    <div class="more-info-label">
+      More Information
+    </div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label ">
+          <img src="../assets/min.jpg" alt="">
+          <span>min</span>
+        </div>
+        <div class="info-block-value">
+          <span>{{tempovar.main.temp}}°C</span>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label ">
+          <img src="../assets/max.jpg" alt="">
+          <span>max</span>
+        </div>
+        <div class="info-block-value">
+          <span>{{tempovar.main.temp_max}}°C</span>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label ">
+          <img src="../assets/min.jpg" alt="">
+          <span>min</span>
+        </div>
+        <div class="info-block-value">
+          <span>{{tempovar.main.temp_min}}%</span>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label ">
+          <img src="../assets/wind.webp" alt="" style="width: 60px; height: 50px;">
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">
+          <span>{{tempovar.main.humidity}}km/h</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
